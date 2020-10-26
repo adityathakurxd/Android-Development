@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:our_gfg/components/my_cached_network_image.dart';
-import 'package:our_gfg/models/event.dart';
+
+import 'my_cached_network_image.dart';
+import '../models/event.dart';
 
 class UpcomingEventCard extends StatelessWidget {
   final Event event;
-  final Color _textColor = Color(0xFFfcdab7);
+  final Color _textColor = Colors.black;
 
   UpcomingEventCard({@required this.event});
 
@@ -17,15 +18,6 @@ class UpcomingEventCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(5),
         boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 5)],
-        gradient: LinearGradient(
-          begin: Alignment.bottomLeft,
-          end: Alignment.topRight,
-          colors: [
-            Color(0xFF1d2d50),
-            Color(0xFF133b5c),
-            Color(0xFF1e5f74),
-          ],
-        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +60,8 @@ class UpcomingEventCard extends StatelessWidget {
               children: [
                 TextSpan(
                   text: "Date : ",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Color(0xFF2F8D46)),
                 ),
                 TextSpan(text: event.date),
               ],
@@ -84,7 +77,8 @@ class UpcomingEventCard extends StatelessWidget {
               children: [
                 TextSpan(
                   text: "Time : ",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Color(0xFF2F8D46)),
                 ),
                 TextSpan(text: event.time),
               ],
